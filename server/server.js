@@ -3,7 +3,8 @@ dotenv.config();
 import express from "express";
 import SpotifyWebApi from "spotify-web-api-node";
 import cors from "cors";
-import lyricsFinder from "lyrics-finder";
+import Genius from "genius-lyrics";
+const lyricsClient = new Genius.Client();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -63,9 +64,14 @@ app.post("/refresh", (req, res) => {
 });
 
 app.get("/lyrics", async (req, res) => {
-  const lyrics =
-    (await lyricsFinder(req.query.artist, req.query.track)) ||
-    "no lyrics found";
+  // Search Genuis for the song the user is playing
+  const results = await lyricsClient.songs.search(req.query.track);
+
+  // Select the first results from the list
+  const song = results[0];
+
+  // Get the lyrics
+  const lyrics = (await song.lyrics()) || "No lyrics found";
   res.json({ lyrics });
 });
 

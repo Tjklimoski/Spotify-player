@@ -141,6 +141,8 @@ body {
   white-space: pre-wrap;
   overflow-y: scroll;
   overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: #222 #eee6;
 }
 
 .reveal {

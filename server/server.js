@@ -3,7 +3,7 @@ dotenv.config();
 import express from "express";
 import SpotifyWebApi from "spotify-web-api-node";
 import cors from "cors";
-import Genius from "genius-lyrics";
+import Genius, { Artist } from "genius-lyrics";
 const lyricsClient = new Genius.Client();
 
 const app = express();
@@ -68,10 +68,10 @@ app.get("/lyrics", async (req, res) => {
   const results = await lyricsClient.songs.search(req.query.track);
 
   // Select the first results from the list
-  const song = results[0];
+  const song = results.filter(song => song.artist.name === req.query.artist)[0];
 
   // Get the lyrics
-  const lyrics = (await song.lyrics()) || "No lyrics found";
+  const lyrics = (await song?.lyrics()) || "No lyrics found";
   res.json({ lyrics });
 });
 

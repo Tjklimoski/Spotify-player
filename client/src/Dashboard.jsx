@@ -42,7 +42,6 @@ export default function Dashboard({ code }) {
         },
       })
       .then(res => {
-        console.log(res.data);
         setLyrics(res.data.lyrics);
         setColor(Math.floor(Math.random() * 360));
       });

@@ -3,7 +3,7 @@ dotenv.config();
 import express from "express";
 import SpotifyWebApi from "spotify-web-api-node";
 import cors from "cors";
-import Genius, { Artist } from "genius-lyrics";
+import Genius from "genius-lyrics";
 const lyricsClient = new Genius.Client();
 
 const app = express();

@@ -1,10 +1,9 @@
-import Login from "./Login";
-import Dashboard from "./Dashboard";
+import Login from "./components/Login";
+import Dashboard from "./components/Dashboard";
 
-const code = new URLSearchParams(window.location.search).get('code');
+const code = new URLSearchParams(window.location.search).get("code");
 
 function App() {
-  
   return (
     <div className="wrapper">
       {code ? <Dashboard code={code} /> : <Login />}
@@ -12,4 +11,4 @@ function App() {
   );
 }
 
-export default App
+export default App;

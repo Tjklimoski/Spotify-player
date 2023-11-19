@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import useAuth from "./hooks/useAuth";
+import useAuth from "../hooks/useAuth";
 import SpotifyWebApi from "spotify-web-api-node";
 import axios from "axios";
 import Searchbar from "./Searchbar";

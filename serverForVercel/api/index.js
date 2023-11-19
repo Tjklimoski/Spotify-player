@@ -13,12 +13,6 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// To test vercel express server deployment
-app.get("/test", async (req, res) => {
-  res.setHeader("Content-Type", "text/html");
-  res.send("Hello World. test passed");
-});
-
 //this is an api that we'll call from our react app.
 app.post("/login", (req, res) => {
   const code = req.body.code;

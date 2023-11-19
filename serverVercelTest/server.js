@@ -15,11 +15,11 @@ app.use(express.urlencoded({ extended: true }));
 
 // testing vercel
 app.get("/", (req, res) => {
-  res.end("success on home route");
+  res.send("success on home route");
 });
 
 app.get("/test", (req, res) => {
-  res.end("success on /test route");
+  res.send("success on /test route");
 });
 
 //this is an api that we'll call from our react app.

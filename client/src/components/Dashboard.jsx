@@ -8,7 +8,7 @@ import Lyrics from "./Lyrics";
 import SpotifyControlBar from "./SpotifyControlBar";
 
 const spotifyApi = new SpotifyWebApi({
-  clientId: "c1632634c2b2457cb93a760c789aaef4",
+  clientId: import.meta.env.VITE_CLIENT_ID,
 });
 
 export default function Dashboard({ code }) {

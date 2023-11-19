@@ -4,7 +4,7 @@ import qs from "qs";
 const SPOTIFY_ENDPOINT = "https://accounts.spotify.com/authorize?";
 
 const SPOTIFY_QUERY = {
-  client_id: "c1632634c2b2457cb93a760c789aaef4",
+  client_id: import.meta.env.VITE_CLIENT_ID,
   response_type: "code",
   redirect_uri: `${window.location.origin}/`,
   scope:

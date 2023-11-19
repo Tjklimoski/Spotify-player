@@ -1,0 +1,22 @@
+{
+  "name": "wds_spotify",
+  "version": "1.0.0",
+  "description": "A personal music track player with spotify integration",
+  "scripts": {
+    "devStart": "concurrently \"cd client && npm run dev\" \"cd server && npm run devStart\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tjklimoski/WDS_Spotify_Clone.git"
+  },
+  "author": "TJ Klimoski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tjklimoski/WDS_Spotify_Clone/issues"
+  },
+  "homepage": "https://github.com/Tjklimoski/WDS_Spotify_Clone#readme",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

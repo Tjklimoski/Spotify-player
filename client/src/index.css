@@ -90,6 +90,10 @@ body {
   cursor: pointer;
 }
 
+.search-result:focus {
+  outline: 2px solid #eeeeee;
+}
+
 .search-result img {
   height: "64px";
   aspect-ratio: 1;

@@ -14,7 +14,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.get("/test", (req, res) => {
-  res.send("Hello World");
+  res.end("Hello World");
 });
 
 //this is an api that we'll call from our react app.

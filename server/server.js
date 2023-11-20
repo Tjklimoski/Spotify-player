@@ -78,3 +78,5 @@ app.get("/lyrics", async (req, res) => {
 app.listen(PORT, err =>
   err ? console.error(err) : console.log(`app started on port ${PORT}`)
 );
+
+export default app;

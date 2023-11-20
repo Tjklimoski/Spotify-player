@@ -13,15 +13,6 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// testing vercel
-app.get("/", (req, res) => {
-  res.send("success on home route");
-});
-
-app.get("/test", (req, res) => {
-  res.send("success on /test route");
-});
-
 //this is an api that we'll call from our react app.
 app.post("/login", (req, res) => {
   const code = req.body.code;

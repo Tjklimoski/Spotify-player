@@ -15,10 +15,10 @@ export default function useAuth(code) {
     usedCode.current = code;
 
     axios
-      .post("http://localhost:3000/login", {
+      .post(`${import.meta.env.VITE_API_ORIGIN}login`, {
         code,
       })
-      .then((res) => {
+      .then(res => {
         //set the state variables with the values sent back by the API
         setAccessToken(res.data.accessToken);
         setRefreshToken(res.data.refreshToken);
@@ -37,10 +37,10 @@ export default function useAuth(code) {
     if (!refreshToken || !expiresIn) return;
     const interval = setInterval(() => {
       axios
-        .post("http://localhost:3000/refresh", {
+        .post(`${import.meta.env.VITE_API_ORIGIN}refresh`, {
           refreshToken,
         })
-        .then((res) => {
+        .then(res => {
           //set the state variables with the values sent back by the API
           setAccessToken(res.data.accessToken);
           setExpiresIn(res.data.expiresIn);

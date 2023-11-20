@@ -35,7 +35,7 @@ export default function Dashboard({ code }) {
     if (!playingTrack) return;
 
     axios
-      .get("http://localhost:3000/lyrics", {
+      .get(`${import.meta.env.VITE_API_ORIGIN}lyrics`, {
         params: {
           track: playingTrack.title,
           artist: playingTrack.artists[0].name,

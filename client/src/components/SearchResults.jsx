@@ -1,10 +1,10 @@
-import React from 'react';
-import TrackSearchResult from './TrackSearchResult';
+import React from "react";
+import TrackSearchResult from "./TrackSearchResult";
 
 export default function SearchResults({ tracks, chooseTrack }) {
   return (
     <div className="results">
-      {tracks.map((track) => {
+      {tracks.map(track => {
         return (
           <TrackSearchResult
             track={track}

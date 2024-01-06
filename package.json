@@ -1,5 +1,5 @@
 {
-  "name": "wds_spotify",
+  "name": "spotify_player",
   "version": "1.0.0",
   "description": "Discover and play songs with dynamically displayed lyrics for the selected track.",
   "scripts": {

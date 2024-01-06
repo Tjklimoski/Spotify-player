@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Discover and play songs with dynamically displayed lyrics for the selected track.",
   "scripts": {
-    "devStart": "concurrently \"cd client && npm run dev\" \"cd server && npm run devStart\""
+    "devStart": "concurrently \"cd client && npm run dev\" \"cd server && npm run devStart\"",
+    "postinstall": "cd server && npm install; cd client && npm install"
   },
   "repository": {
     "type": "git",
